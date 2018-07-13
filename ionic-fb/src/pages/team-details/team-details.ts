@@ -15,7 +15,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TeamDetailsPage {
 
+  public team: any={};
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.team = this.navParams.data;
+    console.log('nav params', navParams);
   }
 
   ionViewDidLoad() {

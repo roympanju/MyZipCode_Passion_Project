@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TeamsPage } from '../teams/teams';
+import { LeagueServiceProvider } from '../../providers/league-service/league-service';
+
 
 /**
  * Generated class for the TournamentsPage page.
@@ -16,10 +18,28 @@ import { TeamsPage } from '../teams/teams';
 })
 export class TournamentsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  leagues: any; 
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public leagueServiceProvider: LeagueServiceProvider) {
+    this.getLeagues();
   }
 
-  goToTeams(){
+  getLeagues(){
+
+    this.leagueServiceProvider.load().subscribe(data => {
+      this.leagues = data["competitions"];
+    });
+  }
+
+  name(n: string) {
+    console.log(n);
+
+  }
+  itemTapped1(){
+    this.navCtrl.push(TeamsPage);
+  }
+
+  getToteamsPage(){
     this.navCtrl.push(TeamsPage);
   }
 
