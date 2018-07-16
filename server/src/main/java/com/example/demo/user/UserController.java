@@ -15,9 +15,9 @@ public class UserController {
     private UserRepository userRepository;
 
     @GetMapping(path="/add")
-    public @ResponseBody String addNewUser(@RequestParam String name, @RequestParam String password){ //ResponseBody means the returned string is the response
+    public @ResponseBody String addNewUser(@RequestParam String name, @RequestParam String email, @RequestParam String password){ //ResponseBody means the returned string is the response
         //RequestParam means it is a parameter from a GET or POST request
-        User n = new User(name, password);
+        User n = new User(name, email, password);
         userRepository.save(n);
         return "Saved";
     }
