@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { TournamentsPage } from '../tournaments/tournaments';
+import {ApiProvider } from '../../providers/api/api';
+import { SignUpPage } from '../sign-up/sign-up';
 
 /**
  * Generated class for the MyTeamsPage page.
@@ -16,8 +18,9 @@ import { TournamentsPage } from '../tournaments/tournaments';
 })
 export class MyTeamsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public apiProvider: ApiProvider, public toastCtrl: ToastController) {
   }
+
 
   myButton(){
     this.navCtrl.push(TournamentsPage);
@@ -26,5 +29,11 @@ export class MyTeamsPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad MyTeamsPage');
   }
+
+  createAccount(){
+    this.navCtrl.push(SignUpPage);
+  }
+
+
 
 }

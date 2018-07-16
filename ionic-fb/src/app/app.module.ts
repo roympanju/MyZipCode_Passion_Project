@@ -14,6 +14,8 @@ import { TeamDetailsPage } from '../pages/team-details/team-details';
 import { StandingsPage } from '../pages/standings/standings';
 import { TeamHomePage } from '../pages/team-home/team-home';
 import { LeagueServiceProvider } from '../providers/league-service/league-service';
+import { ApiProvider } from '../providers/api/api';
+import { SignUpPage } from '../pages/sign-up/sign-up';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { LeagueServiceProvider } from '../providers/league-service/league-servic
     TournamentsPage,
     TeamDetailsPage,
     StandingsPage,
-    TeamHomePage
+    TeamHomePage,
+    SignUpPage
   ],
   imports: [
     BrowserModule,
@@ -38,14 +41,16 @@ import { LeagueServiceProvider } from '../providers/league-service/league-servic
     TournamentsPage,
     TeamDetailsPage,
     StandingsPage,
-    TeamHomePage
+    TeamHomePage,
+    SignUpPage
 
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    LeagueServiceProvider
+    LeagueServiceProvider,
+    ApiProvider
   ]
 })
 export class AppModule {}

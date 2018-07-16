@@ -9,16 +9,42 @@
     <button menuToggle ion- button icon-only>
       <ion-icon name ="menu"></ion-icon>
     </button>
-    <ion-title>MyApp</ion-title>
+    <ion-title text-center>MyApp</ion-title>
   </ion-navbar>
   <ion-toolbar color="secondary">
-    <ion-title><span style ="color:red">my-teams</span></ion-title>
+    <ion-title text-center><span style ="color:red">my-teams</span></ion-title>
   </ion-toolbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <p>Welcome to my page</p>
-  <button ion-button full (click)="myButton()">Go to tournaments</button>
+  <h4>Welcome to my page</h4>
+  <div class="login-box">
+    <form #registerForm="ngForm" ng-submit="" (click)="myButton()">
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
+            <ion-item>
+              <ion-input type="text" placeholder="Username" name="name" required [(ngModel)]="Username" ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input type="password" placeholder="Password" name="password" required [(ngModel)]="password"></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="signup-col">
+          <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Login</button>
+        </ion-col>
+      </ion-row>
+    </form>
+    <ion-row>
+      <ion-col color="secondary">
+        <button ion-button class="register-btn" block clear (click)="createAccount()">Create Account</button>
+      </ion-col>
+    </ion-row>
+  </div>
+  
 </ion-content>
