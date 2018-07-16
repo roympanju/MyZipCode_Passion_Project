@@ -1,7 +1,6 @@
 
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
-import { TournamentsPage } from '../tournaments/tournaments';
+import { IonicPage, NavController, NavParams  } from 'ionic-angular';
 import {ApiProvider } from '../../providers/api/api';
 import { NgForm } from '@angular/forms';
 
@@ -22,7 +21,7 @@ export class SignUpPage {
   user: any = {};
   error: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public apiProvider: ApiProvider, public toastCtrl: ToastController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public apiProvider: ApiProvider) {
   }
 
   // ngOnInit(){
@@ -40,16 +39,9 @@ export class SignUpPage {
     console.log('ionViewDidLoad SignUpPage');
   }
 
-  save(form: NgForm){
-    let update: boolean = form['href'];
-    this.apiProvider.save(form).subscribe(result => {
-      let toast = this.toastCtrl.create({
-        message: 'User "'+form.name + '" ' + ((update) ? 'updated' : 'added') + '.',
-        duration: 2000
-      });
-      toast.present();
-      //this.dismiss();
-    }, error => this.error = error)
+  test(createAccountInfo: NgForm) {
+    console.log(createAccountInfo)
+    this.apiProvider.saveUser(createAccountInfo).subscribe(console.log)
   }
 
 }
