@@ -311,10 +311,9 @@ var SignUpPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-sign-up',template:/*ion-inline-start:"/Users/roym/My_Passion_Project/Passion_Project/ionic-fb/src/pages/sign-up/sign-up.html"*/'<!--\n  Generated template for the SignUpPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>sign-up</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <div class="signUp-box">\n    <form #registerForm="ngForm" (ng-submit)="test(registerForm.value)">\n      <ion-row>\n        <ion-col>\n          <ion-list inset>\n            <ion-item>\n              <ion-input type="text" placeholder="Username" name="name" required [(ngModel)]="Username" ></ion-input>\n            </ion-item>\n            <ion-item>\n                <ion-input type="text" placeholder="Email" name="email" required [(ngModel)]="Email" ></ion-input>\n              </ion-item>\n            <ion-item>\n              <ion-input type="password" placeholder="Password" name="password" required [(ngModel)]="password"></ion-input>\n            </ion-item>\n          </ion-list>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col class="signup-col">\n          <button ion-button class="submit-btn" type="submit" (click)="test(registerForm.value)">Create Account</button>\n        </ion-col>\n      </ion-row>\n    </form>\n  \n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/roym/My_Passion_Project/Passion_Project/ionic-fb/src/pages/sign-up/sign-up.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_api_api__["a" /* ApiProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_api_api__["a" /* ApiProvider */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_api_api__["a" /* ApiProvider */]])
     ], SignUpPage);
     return SignUpPage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=sign-up.js.map
@@ -348,27 +347,27 @@ var map = {
 	],
 	"../pages/sign-up/sign-up.module": [
 		283,
-		5
+		0
 	],
 	"../pages/standings/standings.module": [
 		284,
-		4
+		5
 	],
 	"../pages/team-details/team-details.module": [
 		286,
-		3
+		2
 	],
 	"../pages/team-home/team-home.module": [
 		285,
-		2
+		4
 	],
 	"../pages/teams/teams.module": [
 		287,
-		1
+		3
 	],
 	"../pages/tournaments/tournaments.module": [
 		288,
-		0
+		1
 	]
 };
 function webpackAsyncContext(req) {
@@ -720,14 +719,13 @@ var ApiProvider = /** @class */ (function () {
         return this.http.get('http:localhost:8080/user');
     };
     ApiProvider.prototype.saveUser = function (createAccountInfo) {
-        return this.http.post("http://localhost:8080/user/add?username=" + createAccountInfo.name + "&email=" + createAccountInfo.email + "&password=" + createAccountInfo.password, {});
+        return this.http.post("http://localhost:8080/user/add?name=" + createAccountInfo.name + "&password=" + createAccountInfo.password + "&email=" + createAccountInfo.email, {});
     };
     ApiProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
     ], ApiProvider);
     return ApiProvider;
-    var _a;
 }());
 
 //# sourceMappingURL=api.js.map
