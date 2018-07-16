@@ -12,6 +12,7 @@ public class User {
     @GeneratedValue(strategy =GenerationType.AUTO)
     private long id;
     private String username;
+    private String email;
     private String password;
     private String email;
 
@@ -24,6 +25,13 @@ public class User {
         this.username = username;
         this.password = password;
         this.email = email;
+<<<<<<< HEAD
+=======
+    }
+
+    public long getId() {
+        return id;
+>>>>>>> roy
     }
 
     public void setId(long id) {
@@ -36,6 +44,17 @@ public class User {
 
     public void setUsername(String username) {
         this.username = username;
+<<<<<<< HEAD
+=======
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+>>>>>>> roy
     }
 
     public String getPassword() {
