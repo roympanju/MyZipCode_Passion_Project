@@ -347,27 +347,27 @@ var map = {
 	],
 	"../pages/sign-up/sign-up.module": [
 		283,
-		0
+		5
 	],
 	"../pages/standings/standings.module": [
 		284,
-		5
+		4
 	],
 	"../pages/team-details/team-details.module": [
+		285,
+		3
+	],
+	"../pages/team-home/team-home.module": [
 		286,
 		2
 	],
-	"../pages/team-home/team-home.module": [
-		285,
-		4
-	],
 	"../pages/teams/teams.module": [
 		287,
-		3
+		1
 	],
 	"../pages/tournaments/tournaments.module": [
 		288,
-		1
+		0
 	]
 };
 function webpackAsyncContext(req) {
@@ -515,8 +515,8 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/my-teams/my-teams.module#MyTeamsPageModule', name: 'MyTeamsPage', segment: 'my-teams', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sign-up/sign-up.module#SignUpPageModule', name: 'SignUpPage', segment: 'sign-up', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/standings/standings.module#StandingsPageModule', name: 'StandingsPage', segment: 'standings', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/team-home/team-home.module#TeamHomePageModule', name: 'TeamHomePage', segment: 'team-home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/team-details/team-details.module#TeamDetailsPageModule', name: 'TeamDetailsPage', segment: 'team-details', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/team-home/team-home.module#TeamHomePageModule', name: 'TeamHomePage', segment: 'team-home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/teams/teams.module#TeamsPageModule', name: 'TeamsPage', segment: 'teams', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tournaments/tournaments.module#TournamentsPageModule', name: 'TournamentsPage', segment: 'tournaments', priority: 'low', defaultHistory: [] }
                     ]
@@ -719,7 +719,7 @@ var ApiProvider = /** @class */ (function () {
         return this.http.get('http:localhost:8080/user');
     };
     ApiProvider.prototype.saveUser = function (createAccountInfo) {
-        return this.http.post("http://localhost:8080/user/add?name=" + createAccountInfo.name + "&password=" + createAccountInfo.password + "&email=" + createAccountInfo.email, {});
+        return this.http.post("http://localhost:8080/user/add?username=" + createAccountInfo.name + "&email=" + createAccountInfo.email + "&password=" + createAccountInfo.password, {});
     };
     ApiProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
