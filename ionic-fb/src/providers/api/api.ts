@@ -20,7 +20,8 @@ export class ApiProvider {
   }
 
   saveUser(createAccountInfo: any) : Observable<Object> {
-    return this.http.post(`http://localhost:8080/user/add?username=${createAccountInfo.name}&email=${createAccountInfo.email}&password=${createAccountInfo.password}`, {})
+    //return this.http.post(`http://localhost:8080/user/add?username=${createAccountInfo.name}&email=${createAccountInfo.email}&password=${createAccountInfo.password}`, {})
+    return this.http.post(`http://localhost:8080/user/add`, createAccountInfo);
   }
 
 }
