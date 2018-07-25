@@ -1,5 +1,6 @@
 package com.example.demo.user;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,9 +19,9 @@ public class UserController {
     @PostMapping(path="/add")
     //public @ResponseBody String addNewUser(@RequestParam String username, @RequestParam String email, @RequestParam String password){ //ResponseBody means the returned string is the response
         //RequestParam means it is a parameter from a GET or POST request
-      public @ResponseBody String addNewuser(@RequestBody User user) {
+      public @ResponseBody String addNewUser(@RequestBody User user) throws JsonProcessingException {
         userRepository.save(user);
-        return "saved";
+        return om.writeValueAsString(user);
     }
 
     @GetMapping(path="/all")

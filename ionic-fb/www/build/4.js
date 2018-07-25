@@ -1,14 +1,14 @@
 webpackJsonp([4],{
 
-/***/ 284:
+/***/ 287:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StandingsPageModule", function() { return StandingsPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TeamDetailsPageModule", function() { return TeamDetailsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__standings__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__team_details__ = __webpack_require__(105);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var StandingsPageModule = /** @class */ (function () {
-    function StandingsPageModule() {
+var TeamDetailsPageModule = /** @class */ (function () {
+    function TeamDetailsPageModule() {
     }
-    StandingsPageModule = __decorate([
+    TeamDetailsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__standings__["a" /* StandingsPage */],
+                __WEBPACK_IMPORTED_MODULE_2__team_details__["a" /* TeamDetailsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__standings__["a" /* StandingsPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__team_details__["a" /* TeamDetailsPage */]),
             ],
         })
-    ], StandingsPageModule);
-    return StandingsPageModule;
+    ], TeamDetailsPageModule);
+    return TeamDetailsPageModule;
 }());
 
-//# sourceMappingURL=standings.module.js.map
+//# sourceMappingURL=team-details.module.js.map
 
 /***/ })
 

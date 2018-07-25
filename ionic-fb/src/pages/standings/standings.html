@@ -13,6 +13,33 @@
 </ion-header>
 
 
-<ion-content padding>
-  <h2>Standing Page</h2>
+<ion-content padding >
+  <!-- <ion-scroll  scrollY="true" style="width: 100%; height: 100%;"> -->
+  <div >
+      <table>
+        <tr>
+          <td class="col">Club</td>
+          <td class="col">MP</td>
+          <td class="col">W</td>
+          <td class="col">D</td>
+          <td class="col">L</td>
+          <td class="col">Pts</td>
+          <td class="col">GF</td>
+          <td class="col">GA</td>
+          <td class="col">GD</td>
+        </tr>
+        <tr *ngFor="let stats of standings"> 
+            <td class="col">{{stats.team.name}}</td>
+            <td class="col">{{stats.playedGames}}</td>
+            <td class="col">{{stats.won}}</td>
+            <td class="col">{{stats.draw}}</td>
+            <td class="col">{{stats.lost}}</td>
+            <td class="col">{{stats.points}}</td>
+            <td class="col">{{stats.goalsFor}}</td>
+            <td class="col">{{stats.goalsAgainst}}</td>
+            <td class="col">{{stats.goalDifference}}</td>
+        </tr>
+      </table>
+  </div>
+  <!-- </ion-scroll> -->
 </ion-content>

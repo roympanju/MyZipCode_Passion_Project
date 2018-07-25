@@ -2,13 +2,13 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>tournaments</ion-title>
+    <ion-title>Tournaments</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content color ="secondary">
-    <button ion-button (click)="getToteamsPage()">test</button>
-    <button ion-button class="test" *ngFor="let league of leagues" color="secondary" full (click)="name(league.name)">{{league.name}}</button>
+    <!-- <button ion-item (click)="getToteamsPage($event, league)">test</button> -->
+    <button  class="test" *ngFor="let league of leagues" ion-item (click)="goToTeamsPage($event, league)">{{league.name}}</button>
 </ion-content>

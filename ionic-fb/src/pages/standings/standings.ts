@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { LeagueServiceProvider } from '../../providers/league-service/league-service';
 
 /**
  * Generated class for the StandingsPage page.
@@ -15,11 +16,25 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class StandingsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public team: any;
+  public league: any;
+  public standings =[];
+
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams, 
+    public leagueServiceApi: LeagueServiceProvider) {
+
+    //this.team = this.navParams.get("team").data;
+    this.league = this.navParams.data;
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad StandingsPage');
+    console.log(this.league.name);
+    let table = this.navParams.data;
+    this.leagueServiceApi.getLeasgueStandings(table.id).subscribe(data => {
+      this.standings = data.standings[0].table;
+      console.log(this.standings);
+    })
   }
 
 }

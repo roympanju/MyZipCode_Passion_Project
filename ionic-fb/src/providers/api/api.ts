@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import  { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Observable } from '../../../node_modules/rxjs/Rx';
 
@@ -11,12 +12,16 @@ import { Observable } from '../../../node_modules/rxjs/Rx';
 @Injectable()
 export class ApiProvider {
 
-  constructor(public http: HttpClient) {
+  private baseUrl = 'http:localhost:8080/user';
+
+  constructor(public http: Http) {
     console.log('Hello ApiProvider Provider');
   }
 
   getUsers(){
-    return this.http.get('http:localhost:8080/user')
+    return new Promise(resolve => {
+      this.http.get(`${this.baseUrl}/all.json`).subscribe(res => resolve(res.json()));
+    });
   }
 
   saveUser(createAccountInfo: any) : Observable<Object> {

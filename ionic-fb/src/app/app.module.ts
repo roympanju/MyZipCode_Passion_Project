@@ -16,6 +16,8 @@ import { TeamHomePage } from '../pages/team-home/team-home';
 import { LeagueServiceProvider } from '../providers/league-service/league-service';
 import { ApiProvider } from '../providers/api/api';
 import { SignUpPage } from '../pages/sign-up/sign-up';
+import { HttpModule } from '@angular/http';
+import { TeamSchedulePage } from '../pages/team-schedule/team-schedule';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,14 @@ import { SignUpPage } from '../pages/sign-up/sign-up';
     TournamentsPage,
     TeamDetailsPage,
     StandingsPage,
+    TeamSchedulePage,
     TeamHomePage,
     SignUpPage
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -41,6 +45,7 @@ import { SignUpPage } from '../pages/sign-up/sign-up';
     TournamentsPage,
     TeamDetailsPage,
     StandingsPage,
+    TeamSchedulePage,
     TeamHomePage,
     SignUpPage
 

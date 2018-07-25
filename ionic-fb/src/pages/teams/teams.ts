@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+//import { TeamHomePage } from '../team-home/team-home';
+import { LeagueServiceProvider } from '../../providers/league-service/league-service';
+import { TeamSchedulePage } from '../team-schedule/team-schedule';
 import { TeamHomePage } from '../team-home/team-home';
 
 /**
@@ -16,21 +19,26 @@ import { TeamHomePage } from '../team-home/team-home';
 })
 export class TeamsPage {
 
-  public teams =[ 
-    {id: 1, name: "Manchester United"},
-    {id: 2, name: "Arsenal"},
-    {id: 3, name: "Chelsea"}
-  ];
+  public teams =[];
+  public league: any={};
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public leagueServiceProvider: LeagueServiceProvider) {
+    this.league = this.navParams.data;
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad TeamsPage');
+    //console.log('ionViewDidLoad TeamsPage');
+    let leag = this.navParams.data;
+    //console.log(leag);
+    this.leagueServiceProvider.getleagueData(leag.id).subscribe(data => {
+      this.teams = data.teams;
+      // let seasons = data[0];
+      console.log(this.teams);
+    });
   }
 
   itemTapped(_$event, team){
-    this.navCtrl.push(TeamHomePage, team);
+    this.navCtrl.push(TeamHomePage, {team: team, league: this.league});
   }
 
 
