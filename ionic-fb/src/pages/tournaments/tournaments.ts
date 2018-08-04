@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController, Spinner } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController  } from 'ionic-angular';
 import { TeamsPage } from '../teams/teams';
 import { LeagueServiceProvider } from '../../providers/league-service/league-service';
 

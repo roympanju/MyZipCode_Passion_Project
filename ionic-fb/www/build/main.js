@@ -4,11 +4,70 @@ webpackJsonp([8],{
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyTeamsPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tournaments_tournaments__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_api_api__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__sign_up_sign_up__ = __webpack_require__(108);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the MyTeamsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var MyTeamsPage = /** @class */ (function () {
+    function MyTeamsPage(navCtrl, navParams, apiProvider, toastCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.apiProvider = apiProvider;
+        this.toastCtrl = toastCtrl;
+    }
+    MyTeamsPage.prototype.myButton = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__tournaments_tournaments__["a" /* TournamentsPage */]);
+    };
+    MyTeamsPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad MyTeamsPage');
+    };
+    MyTeamsPage.prototype.createAccount = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__sign_up_sign_up__["a" /* SignUpPage */]);
+    };
+    MyTeamsPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-my-teams',template:/*ion-inline-start:"/Users/roym/My_Passion_Project/Passion_Project/ionic-fb/src/pages/my-teams/my-teams.html"*/'<!--\n  Generated template for the MyTeamsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <button menuToggle ion- button icon-only>\n      <ion-icon name ="menu"></ion-icon>\n    </button>\n    <ion-title text-center>MyApp</ion-title>\n  </ion-navbar>\n  <ion-toolbar color="secondary">\n    <ion-title text-center><span style ="color:red">my-teams</span></ion-title>\n  </ion-toolbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <h4>Welcome to my page</h4>\n  <div class="login-box">\n    <form #registerForm="ngForm"  (ng-submit)="myButton()">\n      <ion-row>\n        <ion-col>\n          <ion-list inset>\n            <ion-item>\n              <ion-input type="text" placeholder="Username" name="name" required [(ngModel)]="Username" ></ion-input>\n            </ion-item>\n            <ion-item>\n              <ion-input type="password" placeholder="Password" name="password" required [(ngModel)]="password"></ion-input>\n            </ion-item>\n          </ion-list>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col>\n          <button ion-button class="submit-btn" full type="submit" (click)="myButton()" [disabled]="!registerForm.form.valid">Login</button>\n        </ion-col>\n      </ion-row>\n    </form>\n    <ion-row>\n      <ion-col color="secondary">\n        <button ion-button class="register-btn" block clear (click)="createAccount()">Create Account</button>\n      </ion-col>\n    </ion-row>\n  </div>\n  \n</ion-content>\n'/*ion-inline-end:"/Users/roym/My_Passion_Project/Passion_Project/ionic-fb/src/pages/my-teams/my-teams.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_api_api__["a" /* ApiProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */]])
+    ], MyTeamsPage);
+    return MyTeamsPage;
+}());
+
+//# sourceMappingURL=my-teams.js.map
+
+/***/ }),
+
+/***/ 104:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TeamsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_league_service_league_service__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__team_home_team_home__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__team_home_team_home__ = __webpack_require__(52);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -50,7 +109,8 @@ var TeamsPage = /** @class */ (function () {
         });
     };
     TeamsPage.prototype.itemTapped = function (_$event, team) {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__team_home_team_home__["a" /* TeamHomePage */], { team: team, league: this.league });
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__team_home_team_home__["a" /* TeamHomePage */], { team: { team: team, league: this.league } });
+        console.log({ team: team, league: this.league });
     };
     TeamsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
@@ -62,69 +122,6 @@ var TeamsPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=teams.js.map
-
-/***/ }),
-
-/***/ 104:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TeamHomePage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__team_details_team_details__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__my_teams_my_teams__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__team_schedule_team_schedule__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__standings_standings__ = __webpack_require__(107);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-/**
- * Generated class for the TeamHomePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var TeamHomePage = /** @class */ (function () {
-    function TeamHomePage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.team = {};
-        this.league = {};
-        this.teamDetailTab = __WEBPACK_IMPORTED_MODULE_2__team_details_team_details__["a" /* TeamDetailsPage */];
-        this.teamScheduleTab = __WEBPACK_IMPORTED_MODULE_4__team_schedule_team_schedule__["a" /* TeamSchedulePage */];
-        this.standingsTab = __WEBPACK_IMPORTED_MODULE_5__standings_standings__["a" /* StandingsPage */];
-        this.team = this.navParams.get("team");
-        this.league = this.navParams.get("league");
-    }
-    TeamHomePage.prototype.ionViewDidLoad = function () {
-        console.log(this.league.name);
-    };
-    TeamHomePage.prototype.goHome = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__my_teams_my_teams__["a" /* MyTeamsPage */]);
-    };
-    TeamHomePage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-team-home',template:/*ion-inline-start:"/Users/roym/My_Passion_Project/Passion_Project/ionic-fb/src/pages/team-home/team-home.html"*/'<!--\n  Generated template for the TeamHomePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>{{team.name}}</ion-title>\n    <ion-buttons end>\n        <button ion-button icon-only (click)="goHome()">\n          <ion-icon name="home"></ion-icon>\n        </button>\n      </ion-buttons>\n  </ion-navbar>\n  \n</ion-header>\n\n<ion-tabs>\n  <ion-tab tabTitle="TeamBasicInfo" [root]="teamDetailTab" [rootParams]="team" tabIcon="football"></ion-tab>\n  <ion-tab tabTitle="Fixtures" [root]="teamScheduleTab" [rootParams]="team" tabIcon="football"></ion-tab>\n  <ion-tab tabTitle="Standings" [root]="standingsTab" [rootParams]="league" tabIcon="podium"></ion-tab>\n\n</ion-tabs>'/*ion-inline-end:"/Users/roym/My_Passion_Project/Passion_Project/ionic-fb/src/pages/team-home/team-home.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
-    ], TeamHomePage);
-    return TeamHomePage;
-}());
-
-//# sourceMappingURL=team-home.js.map
 
 /***/ }),
 
@@ -162,7 +159,7 @@ var TeamDetailsPage = /** @class */ (function () {
         this.team = this.navParams.data;
     }
     TeamDetailsPage.prototype.ionViewDidLoad = function () {
-        console.log(this.team.name);
+        console.log(this.team);
     };
     TeamDetailsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
@@ -185,6 +182,7 @@ var TeamDetailsPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_league_service_league_service__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__team_home_team_home__ = __webpack_require__(52);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -194,6 +192,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -208,28 +207,50 @@ var TeamSchedulePage = /** @class */ (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.leagueServiceApi = leagueServiceApi;
-        this.team = {};
         this.matches = [];
-        this.team = this.navParams.data;
+        //this.league = this.navParams.data;
+        this.paramObject = this.navParams.data;
+        this.league = this.paramObject.league;
+        this.team = this.paramObject.team;
+        this.team1 = this.team1;
     }
     TeamSchedulePage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        console.log('ionViewDidLoad StandingsPage');
-        var matches = this.navParams.data;
-        this.leagueServiceApi.getTeamMatches(matches.id).subscribe(function (data) {
+        //console.log(league);
+        console.log(this.navParams.data);
+        console.log(this.league);
+        console.log(this.team);
+        var matches = this.team.id;
+        this.leagueServiceApi.getTeamMatches(matches).subscribe(function (data) {
             _this.matches = data.matches;
             console.log(_this.matches);
         });
     };
+    TeamSchedulePage.prototype.goToThisHome = function (_$event, teamObject) {
+        var _this = this;
+        this.leagueServiceApi.getleagueData(this.league.id).subscribe(function (data) {
+            console.log(data["teams"]);
+            var teams = data["teams"];
+            for (var _i = 0, teams_1 = teams; _i < teams_1.length; _i++) {
+                var i = teams_1[_i];
+                if (i.name === teamObject.name) {
+                    _this.team1 = i;
+                    break;
+                }
+            }
+            console.log(_this.team1);
+            _this.navCtrl.parent.parent.push(__WEBPACK_IMPORTED_MODULE_3__team_home_team_home__["a" /* TeamHomePage */], { team: { team: _this.team1, league: _this.league } });
+            console.log({ teamObject: teamObject, league: _this.league });
+        });
+    };
     TeamSchedulePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-team-schedule',template:/*ion-inline-start:"/Users/roym/My_Passion_Project/Passion_Project/ionic-fb/src/pages/team-schedule/team-schedule.html"*/'<!--\n  Generated template for the TeamSchedulePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>teamSchedule</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <h2>Fixture Page</h2>\n    <h5>Name: {{team.name}}</h5>\n  \n    <p *ngFor="let match of matches">\n      <span [class.highlight]="team.name === match.homeTeam.name">{{match.homeTeam.name}}</span> \n      vs \n      <span [class.highlight]="team.name === match.awayTeam.name">{{match.awayTeam.name}}</span>\n    </p>\n</ion-content>\n'/*ion-inline-end:"/Users/roym/My_Passion_Project/Passion_Project/ionic-fb/src/pages/team-schedule/team-schedule.html"*/,
+            selector: 'page-team-schedule',template:/*ion-inline-start:"/Users/roym/My_Passion_Project/Passion_Project/ionic-fb/src/pages/team-schedule/team-schedule.html"*/'<!--\n  Generated template for the TeamSchedulePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>teamSchedule</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <h2>Fixture Page</h2>\n    <h5>Name: {{team.name}}</h5>\n    <p *ngFor="let match of matches">\n      <button (click)="goToThisHome($event, match.homeTeam)"><span [class.highlight]="team.name === match.homeTeam.name">{{match.homeTeam.name}}</span></button> \n      vs \n      <button (click)="goToThisHome($event, match.awayTeam)"><span [class.highlight]="team.name === match.awayTeam.name">{{match.awayTeam.name}}</span></button>\n    </p>\n</ion-content>\n'/*ion-inline-end:"/Users/roym/My_Passion_Project/Passion_Project/ionic-fb/src/pages/team-schedule/team-schedule.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__providers_league_service_league_service__["a" /* LeagueServiceProvider */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_league_service_league_service__["a" /* LeagueServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_league_service_league_service__["a" /* LeagueServiceProvider */]) === "function" && _c || Object])
     ], TeamSchedulePage);
     return TeamSchedulePage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=team-schedule.js.map
@@ -268,21 +289,22 @@ var StandingsPage = /** @class */ (function () {
         this.navParams = navParams;
         this.leagueServiceApi = leagueServiceApi;
         this.standings = [];
-        //this.team = this.navParams.get("team").data;
+        //this.team = this.navParams.data;
         this.league = this.navParams.data;
+        console.log(this.league);
     }
     StandingsPage.prototype.ionViewDidLoad = function () {
         var _this = this;
-        console.log(this.league.name);
+        console.log(this.league);
         var table = this.navParams.data;
         this.leagueServiceApi.getLeasgueStandings(table.id).subscribe(function (data) {
             _this.standings = data.standings[0].table;
-            console.log(_this.standings);
+            //console.log(this.standings);
         });
     };
     StandingsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-standings',template:/*ion-inline-start:"/Users/roym/My_Passion_Project/Passion_Project/ionic-fb/src/pages/standings/standings.html"*/'<!--\n  Generated template for the StandingsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>standings</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding >\n  <!-- <ion-scroll  scrollY="true" style="width: 100%; height: 100%;"> -->\n  <div >\n      <table>\n        <tr>\n          <td class="col">Club</td>\n          <td class="col">MP</td>\n          <td class="col">W</td>\n          <td class="col">D</td>\n          <td class="col">L</td>\n          <td class="col">Pts</td>\n          <td class="col">GF</td>\n          <td class="col">GA</td>\n          <td class="col">GD</td>\n        </tr>\n        <tr *ngFor="let stats of standings"> \n            <td class="col">{{stats.team.name}}</td>\n            <td class="col">{{stats.playedGames}}</td>\n            <td class="col">{{stats.won}}</td>\n            <td class="col">{{stats.draw}}</td>\n            <td class="col">{{stats.lost}}</td>\n            <td class="col">{{stats.points}}</td>\n            <td class="col">{{stats.goalsFor}}</td>\n            <td class="col">{{stats.goalsAgainst}}</td>\n            <td class="col">{{stats.goalDifference}}</td>\n        </tr>\n      </table>\n  </div>\n  <!-- </ion-scroll> -->\n</ion-content>\n'/*ion-inline-end:"/Users/roym/My_Passion_Project/Passion_Project/ionic-fb/src/pages/standings/standings.html"*/,
+            selector: 'page-standings',template:/*ion-inline-start:"/Users/roym/My_Passion_Project/Passion_Project/ionic-fb/src/pages/standings/standings.html"*/'<!--\n  Generated template for the StandingsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>standings</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding >\n  <!-- <ion-scroll  scrollY="true" style="width: 100%; height: 100%;"> -->\n  <div width-100>\n      <table>\n        <tr >\n          <td class="colClass">Club</td>\n          <td class="colClass">MP</td>\n          <td class="colClass">W</td>\n          <td class="colClass">D</td>\n          <td class="colClass">L</td>\n          <td class="colClass">Pts</td>\n          <td class="colClass">GF</td>\n          <td class="colClass">GA</td>\n          <td class="colClass">GD</td>\n        </tr>\n        <tr *ngFor="let stats of standings" width="100%"> \n            <td class="colClass">{{stats.team.name}}</td>\n            <td class="colClass">{{stats.playedGames}}</td>\n            <td class="colClass">{{stats.won}}</td>\n            <td class="colClass">{{stats.draw}}</td>\n            <td class="colClass">{{stats.lost}}</td>\n            <td class="colClass">{{stats.points}}</td>\n            <td class="colClass">{{stats.goalsFor}}</td>\n            <td class="colClass">{{stats.goalsAgainst}}</td>\n            <td class="colClass">{{stats.goalDifference}}</td>\n        </tr>\n      </table>\n  </div>\n  <!-- </ion-scroll> -->\n</ion-content>\n'/*ion-inline-end:"/Users/roym/My_Passion_Project/Passion_Project/ionic-fb/src/pages/standings/standings.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
@@ -399,11 +421,11 @@ var map = {
 		3
 	],
 	"../pages/team-schedule/team-schedule.module": [
-		289,
+		290,
 		2
 	],
 	"../pages/teams/teams.module": [
-		290,
+		289,
 		1
 	],
 	"../pages/tournaments/tournaments.module": [
@@ -453,12 +475,12 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(276);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_splash_screen__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_teams_teams__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_my_teams_my_teams__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_tournaments_tournaments__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_teams_teams__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_my_teams_my_teams__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_tournaments_tournaments__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_team_details_team_details__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_standings_standings__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_team_home_team_home__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_team_home_team_home__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_league_service_league_service__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__providers_api_api__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_sign_up_sign_up__ = __webpack_require__(108);
@@ -515,8 +537,8 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/standings/standings.module#StandingsPageModule', name: 'StandingsPage', segment: 'standings', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/team-details/team-details.module#TeamDetailsPageModule', name: 'TeamDetailsPage', segment: 'team-details', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/team-home/team-home.module#TeamHomePageModule', name: 'TeamHomePage', segment: 'team-home', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/team-schedule/team-schedule.module#TeamSchedulePageModule', name: 'TeamSchedulePage', segment: 'team-schedule', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/teams/teams.module#TeamsPageModule', name: 'TeamsPage', segment: 'teams', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/team-schedule/team-schedule.module#TeamSchedulePageModule', name: 'TeamSchedulePage', segment: 'team-schedule', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tournaments/tournaments.module#TournamentsPageModule', name: 'TournamentsPage', segment: 'tournaments', priority: 'low', defaultHistory: [] }
                     ]
                 }),
@@ -558,8 +580,8 @@ var AppModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_my_teams_my_teams__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_tournaments_tournaments__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_my_teams_my_teams__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_tournaments_tournaments__ = __webpack_require__(51);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -599,7 +621,7 @@ var MyApp = /** @class */ (function () {
         this.nav.setRoot(page.component);
     };
     MyApp.prototype.goHome = function () {
-        this.nav.push(__WEBPACK_IMPORTED_MODULE_4__pages_my_teams_my_teams__["a" /* MyTeamsPage */]);
+        this.nav.popToRoot();
     };
     MyApp.prototype.goToTournaments = function () {
         this.nav.push(__WEBPACK_IMPORTED_MODULE_5__pages_tournaments_tournaments__["a" /* TournamentsPage */]);
@@ -688,69 +710,10 @@ var LeagueServiceProvider = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyTeamsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tournaments_tournaments__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_api_api__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__sign_up_sign_up__ = __webpack_require__(108);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-/**
- * Generated class for the MyTeamsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var MyTeamsPage = /** @class */ (function () {
-    function MyTeamsPage(navCtrl, navParams, apiProvider, toastCtrl) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.apiProvider = apiProvider;
-        this.toastCtrl = toastCtrl;
-    }
-    MyTeamsPage.prototype.myButton = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__tournaments_tournaments__["a" /* TournamentsPage */]);
-    };
-    MyTeamsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad MyTeamsPage');
-    };
-    MyTeamsPage.prototype.createAccount = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__sign_up_sign_up__["a" /* SignUpPage */]);
-    };
-    MyTeamsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-my-teams',template:/*ion-inline-start:"/Users/roym/My_Passion_Project/Passion_Project/ionic-fb/src/pages/my-teams/my-teams.html"*/'<!--\n  Generated template for the MyTeamsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n  <ion-navbar color="primary">\n    <button menuToggle ion- button icon-only>\n      <ion-icon name ="menu"></ion-icon>\n    </button>\n    <ion-title text-center>MyApp</ion-title>\n  </ion-navbar>\n  <ion-toolbar color="secondary">\n    <ion-title text-center><span style ="color:red">my-teams</span></ion-title>\n  </ion-toolbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <h4>Welcome to my page</h4>\n  <div class="login-box">\n    <form #registerForm="ngForm"  (ng-submit)="myButton()">\n      <ion-row>\n        <ion-col>\n          <ion-list inset>\n            <ion-item>\n              <ion-input type="text" placeholder="Username" name="name" required [(ngModel)]="Username" ></ion-input>\n            </ion-item>\n            <ion-item>\n              <ion-input type="password" placeholder="Password" name="password" required [(ngModel)]="password"></ion-input>\n            </ion-item>\n          </ion-list>\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col class="signup-col">\n          <button ion-button class="submit-btn" full type="submit" (click)="myButton()" [disabled]="!registerForm.form.valid">Login</button>\n        </ion-col>\n      </ion-row>\n    </form>\n    <ion-row>\n      <ion-col color="secondary">\n        <button ion-button class="register-btn" block clear (click)="createAccount()">Create Account</button>\n      </ion-col>\n    </ion-row>\n  </div>\n  \n</ion-content>\n'/*ion-inline-end:"/Users/roym/My_Passion_Project/Passion_Project/ionic-fb/src/pages/my-teams/my-teams.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__providers_api_api__["a" /* ApiProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */]])
-    ], MyTeamsPage);
-    return MyTeamsPage;
-}());
-
-//# sourceMappingURL=my-teams.js.map
-
-/***/ }),
-
-/***/ 52:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TournamentsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__teams_teams__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__teams_teams__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_league_service_league_service__ = __webpack_require__(33);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -812,7 +775,7 @@ var TournamentsPage = /** @class */ (function () {
     };
     TournamentsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-tournaments',template:/*ion-inline-start:"/Users/roym/My_Passion_Project/Passion_Project/ionic-fb/src/pages/tournaments/tournaments.html"*/'\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>Tournaments</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content color ="secondary">\n    <!-- <button ion-item (click)="getToteamsPage($event, league)">test</button> -->\n    <button  class="test" *ngFor="let league of leagues" ion-item (click)="goToTeamsPage($event, league)">{{league.name}}</button>\n</ion-content>\n'/*ion-inline-end:"/Users/roym/My_Passion_Project/Passion_Project/ionic-fb/src/pages/tournaments/tournaments.html"*/,
+            selector: 'page-tournaments',template:/*ion-inline-start:"/Users/roym/My_Passion_Project/Passion_Project/ionic-fb/src/pages/tournaments/tournaments.html"*/'\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>Tournaments</ion-title>\n  </ion-navbar>\n  <ion-toolbar color="secondary">\n    <ion-title text-center><span>Select A league Below</span></ion-title>\n  </ion-toolbar>\n\n</ion-header>\n\n\n<ion-content color ="secondary">\n    <!-- <button ion-item (click)="getToteamsPage($event, league)">test</button> -->\n    <button  class="test" *ngFor="let league of leagues" ion-item (click)="goToTeamsPage($event, league)">{{league.name}}</button>\n</ion-content>\n'/*ion-inline-end:"/Users/roym/My_Passion_Project/Passion_Project/ionic-fb/src/pages/tournaments/tournaments.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
@@ -823,6 +786,72 @@ var TournamentsPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=tournaments.js.map
+
+/***/ }),
+
+/***/ 52:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TeamHomePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__team_details_team_details__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__team_schedule_team_schedule__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__standings_standings__ = __webpack_require__(107);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the TeamHomePage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var TeamHomePage = /** @class */ (function () {
+    function TeamHomePage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.teamObject = {};
+        this.team = {};
+        this.league = {};
+        this.teamDetailTab = __WEBPACK_IMPORTED_MODULE_2__team_details_team_details__["a" /* TeamDetailsPage */];
+        this.teamScheduleTab = __WEBPACK_IMPORTED_MODULE_3__team_schedule_team_schedule__["a" /* TeamSchedulePage */];
+        this.standingsTab = __WEBPACK_IMPORTED_MODULE_4__standings_standings__["a" /* StandingsPage */];
+        this.teamObject = this.navParams.get("team");
+        this.team = this.teamObject.team;
+        //this.league = this.navParams.get("league");
+        this.league = this.teamObject.league;
+    }
+    TeamHomePage.prototype.ionViewDidLoad = function () {
+        console.log("TEAM - HOME");
+        console.log(this.team);
+        // console.log(this.team.name);
+    };
+    TeamHomePage.prototype.goHome = function () {
+        this.navCtrl.popToRoot();
+    };
+    TeamHomePage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-team-home',template:/*ion-inline-start:"/Users/roym/My_Passion_Project/Passion_Project/ionic-fb/src/pages/team-home/team-home.html"*/'<!--\n  Generated template for the TeamHomePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>{{team.name}}</ion-title>\n    <ion-buttons end>\n        <button ion-button icon-only (click)="goHome()">\n          <ion-icon name="home"></ion-icon>\n        </button>\n      </ion-buttons>\n  </ion-navbar>\n  \n</ion-header>\n\n<ion-tabs>\n  <ion-tab tabTitle="TeamBasicInfo" [root]="teamDetailTab" [rootParams]="teamObject.team" tabIcon="football"></ion-tab>\n  <ion-tab tabTitle="Fixtures" [root]="teamScheduleTab" [rootParams]="teamObject" tabIcon="football"></ion-tab>\n  <ion-tab tabTitle="Standings" [root]="standingsTab" [rootParams]="teamObject.league" tabIcon="podium"></ion-tab>\n\n</ion-tabs>'/*ion-inline-end:"/Users/roym/My_Passion_Project/Passion_Project/ionic-fb/src/pages/team-home/team-home.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+    ], TeamHomePage);
+    return TeamHomePage;
+}());
+
+//# sourceMappingURL=team-home.js.map
 
 /***/ }),
 
@@ -842,6 +871,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+// import { HttpClient } from '@angular/common/http';
 
 
 /*

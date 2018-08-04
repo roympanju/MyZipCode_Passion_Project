@@ -25678,10 +25678,10 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
-.col {
+.colClass {
   border: solid 1px grey;
-  border-bottom-style: none;
-  border-right-style: none;
+  border-bottom-style: solid 1px grey;
+  border-right-style: solid 1px grey;
 }
 
 .highlight {

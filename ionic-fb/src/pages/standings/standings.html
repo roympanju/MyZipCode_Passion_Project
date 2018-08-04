@@ -15,29 +15,29 @@
 
 <ion-content padding >
   <!-- <ion-scroll  scrollY="true" style="width: 100%; height: 100%;"> -->
-  <div >
+  <div width-100>
       <table>
-        <tr>
-          <td class="col">Club</td>
-          <td class="col">MP</td>
-          <td class="col">W</td>
-          <td class="col">D</td>
-          <td class="col">L</td>
-          <td class="col">Pts</td>
-          <td class="col">GF</td>
-          <td class="col">GA</td>
-          <td class="col">GD</td>
+        <tr >
+          <td class="colClass">Club</td>
+          <td class="colClass">MP</td>
+          <td class="colClass">W</td>
+          <td class="colClass">D</td>
+          <td class="colClass">L</td>
+          <td class="colClass">Pts</td>
+          <td class="colClass">GF</td>
+          <td class="colClass">GA</td>
+          <td class="colClass">GD</td>
         </tr>
-        <tr *ngFor="let stats of standings"> 
-            <td class="col">{{stats.team.name}}</td>
-            <td class="col">{{stats.playedGames}}</td>
-            <td class="col">{{stats.won}}</td>
-            <td class="col">{{stats.draw}}</td>
-            <td class="col">{{stats.lost}}</td>
-            <td class="col">{{stats.points}}</td>
-            <td class="col">{{stats.goalsFor}}</td>
-            <td class="col">{{stats.goalsAgainst}}</td>
-            <td class="col">{{stats.goalDifference}}</td>
+        <tr *ngFor="let stats of standings" width="100%"> 
+            <td class="colClass">{{stats.team.name}}</td>
+            <td class="colClass">{{stats.playedGames}}</td>
+            <td class="colClass">{{stats.won}}</td>
+            <td class="colClass">{{stats.draw}}</td>
+            <td class="colClass">{{stats.lost}}</td>
+            <td class="colClass">{{stats.points}}</td>
+            <td class="colClass">{{stats.goalsFor}}</td>
+            <td class="colClass">{{stats.goalsAgainst}}</td>
+            <td class="colClass">{{stats.goalDifference}}</td>
         </tr>
       </table>
   </div>

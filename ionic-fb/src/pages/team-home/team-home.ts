@@ -18,6 +18,7 @@ import { StandingsPage } from '../standings/standings';
   templateUrl: 'team-home.html',
 })
 export class TeamHomePage {
+  public teamObject: any={};
   public team: any={};
   public league: any = {};
   public teamDetailTab = TeamDetailsPage;
@@ -25,16 +26,20 @@ export class TeamHomePage {
   public standingsTab = StandingsPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.team = this.navParams.get("team");
-    this.league = this.navParams.get("league");
+    this.teamObject = this.navParams.get("team");
+    this.team = this.teamObject.team;
+    //this.league = this.navParams.get("league");
+    this.league = this.teamObject.league;
   }
 
   ionViewDidLoad() {
-    console.log(this.league.name);
+    console.log("TEAM - HOME")
+    console.log(this.team);
+    // console.log(this.team.name);
   }
 
   goHome(){
-    this.navCtrl.push(MyTeamsPage);
+    this.navCtrl.popToRoot();
   }
 
 }

@@ -24,7 +24,7 @@ export class TeamDetailsPage {
   }
 
   ionViewDidLoad() {
-    console.log(this.team.name);
+    console.log(this.team);
   }
 
   // getTeams(){

@@ -18,8 +18,8 @@
 </ion-header>
 
 <ion-tabs>
-  <ion-tab tabTitle="TeamBasicInfo" [root]="teamDetailTab" [rootParams]="team" tabIcon="football"></ion-tab>
-  <ion-tab tabTitle="Fixtures" [root]="teamScheduleTab" [rootParams]="team" tabIcon="football"></ion-tab>
-  <ion-tab tabTitle="Standings" [root]="standingsTab" [rootParams]="league" tabIcon="podium"></ion-tab>
+  <ion-tab tabTitle="TeamBasicInfo" [root]="teamDetailTab" [rootParams]="teamObject.team" tabIcon="football"></ion-tab>
+  <ion-tab tabTitle="Fixtures" [root]="teamScheduleTab" [rootParams]="teamObject" tabIcon="football"></ion-tab>
+  <ion-tab tabTitle="Standings" [root]="standingsTab" [rootParams]="teamObject.league" tabIcon="podium"></ion-tab>
 
 </ion-tabs>

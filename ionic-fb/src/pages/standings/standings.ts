@@ -24,16 +24,17 @@ export class StandingsPage {
     public navParams: NavParams, 
     public leagueServiceApi: LeagueServiceProvider) {
 
-    //this.team = this.navParams.get("team").data;
+    //this.team = this.navParams.data;
     this.league = this.navParams.data;
+    console.log(this.league)
   }
 
   ionViewDidLoad() {
-    console.log(this.league.name);
+    console.log(this.league);
     let table = this.navParams.data;
     this.leagueServiceApi.getLeasgueStandings(table.id).subscribe(data => {
       this.standings = data.standings[0].table;
-      console.log(this.standings);
+      //console.log(this.standings);
     })
   }
 
