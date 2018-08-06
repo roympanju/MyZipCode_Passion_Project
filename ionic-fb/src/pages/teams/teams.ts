@@ -38,7 +38,8 @@ export class TeamsPage {
   }
 
   itemTapped(_$event, team){
-    this.navCtrl.push(TeamHomePage, {team: {team: team, league: this.league}});
+    //passing an object with the team and league objects inside it so ican have access to both those objects in any of the tabs on the TeamHomePage
+    this.navCtrl.push(TeamHomePage, {teamObject: {team: team, league: this.league}});
     console.log({team, league: this.league})
   }
 

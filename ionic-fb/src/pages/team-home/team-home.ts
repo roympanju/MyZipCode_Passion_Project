@@ -4,6 +4,7 @@ import { TeamDetailsPage } from '../team-details/team-details';
 import { MyTeamsPage } from '../my-teams/my-teams';
 import { TeamSchedulePage } from '../team-schedule/team-schedule';
 import { StandingsPage } from '../standings/standings';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the TeamHomePage page.
@@ -26,7 +27,7 @@ export class TeamHomePage {
   public standingsTab = StandingsPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.teamObject = this.navParams.get("team");
+    this.teamObject = this.navParams.get("teamObject");
     this.team = this.teamObject.team;
     //this.league = this.navParams.get("league");
     this.league = this.teamObject.league;

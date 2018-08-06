@@ -52,7 +52,7 @@ export class TeamSchedulePage {
       }
     }
     console.log(this.team1);
-    this.navCtrl.parent.parent.push(TeamHomePage, {team: {team: this.team1, league: this.league}});
+    this.navCtrl.parent.parent.push(TeamHomePage, {teamObject: {team: this.team1, league: this.league}});
     console.log({teamObject, league: this.league})});
   }
 

@@ -4,6 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { MyTeamsPage } from '../pages/my-teams/my-teams';
 import { TournamentsPage } from '../pages/tournaments/tournaments';
+import { HomePage } from '../pages/home/home';
 
 
 
@@ -46,6 +47,6 @@ export class MyApp {
   }
   
   goToTournaments(){
-    this.nav.push(TournamentsPage);
+    this.nav.push(HomePage);
   }
 }

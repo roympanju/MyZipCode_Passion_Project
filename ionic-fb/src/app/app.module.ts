@@ -18,6 +18,7 @@ import { ApiProvider } from '../providers/api/api';
 import { SignUpPage } from '../pages/sign-up/sign-up';
 import { HttpModule } from '@angular/http';
 import { TeamSchedulePage } from '../pages/team-schedule/team-schedule';
+import { HomePage } from '../pages/home/home';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { TeamSchedulePage } from '../pages/team-schedule/team-schedule';
     StandingsPage,
     TeamSchedulePage,
     TeamHomePage,
+    HomePage,
     SignUpPage
   ],
   imports: [
@@ -47,6 +49,7 @@ import { TeamSchedulePage } from '../pages/team-schedule/team-schedule';
     StandingsPage,
     TeamSchedulePage,
     TeamHomePage,
+    HomePage,
     SignUpPage
 
   ],
