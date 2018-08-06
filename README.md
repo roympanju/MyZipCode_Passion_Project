@@ -7,7 +7,7 @@ Create a user application with components to view the data for the user with a f
 ### For client side
 - HTML
 - CSS
-- JavaScript
+- TypeScript
 - AngularJs
 - Cordova
 - Other to be determined
@@ -16,6 +16,7 @@ Create a user application with components to view the data for the user with a f
 - Java
 - Spring Boot
 - MySql
+- Ionic FrameWork
 - Other to be determined
 
 ### 3rd party API service
