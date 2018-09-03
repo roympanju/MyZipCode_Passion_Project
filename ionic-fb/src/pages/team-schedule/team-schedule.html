@@ -16,9 +16,15 @@
 <ion-content padding>
     <h2>Fixture Page</h2>
     <h5>Name: {{team.name}}</h5>
-    <p *ngFor="let match of matches">
-      <button (click)="goToThisHome($event, match.homeTeam)"><span [class.highlight]="team.name === match.homeTeam.name">{{match.homeTeam.name}}</span></button> 
+    <div style="text-align:center" *ngFor="let match of matches">
+      <span (click)="goToThisHome($event, match.homeTeam)" [class.highlight]="team.name === match.homeTeam.name">{{match.homeTeam.name}}</span> 
       vs 
-      <button (click)="goToThisHome($event, match.awayTeam)"><span [class.highlight]="team.name === match.awayTeam.name">{{match.awayTeam.name}}</span></button>
-    </p>
+      <span  (click)="goToThisHome($event, match.awayTeam)"[class.highlight]="team.name === match.awayTeam.name">{{match.awayTeam.name}}</span>
+
+      <p>Half-Time Score: <span [class.bold]="team.name === match.homeTeam.name">{{match.score.halfTime.homeTeam}}</span> : <span [class.bold]="team.name === match.awayTeam.name">{{match.score.halfTime.awayTeam}}</span></p>
+
+      <p>Full-Time Score: <span [class.bold]="team.name === match.homeTeam.name">{{match.score.fullTime.homeTeam}}</span> : <span [class.bold]="team.name === match.awayTeam.name">{{match.score.fullTime.awayTeam}}</span>
+      </p>
+
+    </div>
 </ion-content>

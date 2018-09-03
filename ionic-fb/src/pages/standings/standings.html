@@ -23,10 +23,10 @@
           <td class="colClass">W</td>
           <td class="colClass">D</td>
           <td class="colClass">L</td>
-          <td class="colClass">Pts</td>
           <td class="colClass">GF</td>
           <td class="colClass">GA</td>
           <td class="colClass">GD</td>
+          <td class="colClass">Pts</td>
         </tr>
         <tr *ngFor="let stats of standings" width="100%"> 
             <td class="colClass">{{stats.team.name}}</td>
@@ -34,10 +34,10 @@
             <td class="colClass">{{stats.won}}</td>
             <td class="colClass">{{stats.draw}}</td>
             <td class="colClass">{{stats.lost}}</td>
-            <td class="colClass">{{stats.points}}</td>
             <td class="colClass">{{stats.goalsFor}}</td>
             <td class="colClass">{{stats.goalsAgainst}}</td>
             <td class="colClass">{{stats.goalDifference}}</td>
+            <td class="colClass">{{stats.points}}</td>
         </tr>
       </table>
   </div>

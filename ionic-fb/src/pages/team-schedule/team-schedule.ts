@@ -41,6 +41,7 @@ export class TeamSchedulePage {
     this.leagueServiceApi.getTeamMatches(matches).subscribe(data => {
       this.matches = data.matches;
       console.log(this.matches);
+      console.log(this.matches[1].score.fullTime.homeTeam);
     })
   }
 
@@ -54,6 +55,7 @@ export class TeamSchedulePage {
     console.log(this.team1);
     this.navCtrl.parent.parent.push(TeamHomePage, {teamObject: {team: this.team1, league: this.league}});
     console.log({teamObject, league: this.league})});
+    
   }
 
   // itemTapped(_$event, team){

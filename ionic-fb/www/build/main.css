@@ -25688,6 +25688,10 @@ ion-navbar.toolbar {
   color: red;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .test {
   display: block;
   margin-bottom: 10px;
